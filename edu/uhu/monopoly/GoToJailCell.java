@@ -13,12 +13,4 @@ public class GoToJailCell extends Cell {
 		JailCell jail = (JailCell)(GameMaster.instance().getGameBoard().queryCell("Jail"));
 		GameMaster.instance().sendToJail(currentPlayer);
 	}
-
-	public boolean isAvailable() {
-		return available;
-	}
-
-	public void setAvailable(boolean available) {
-		this.available = available;
-	}
 }

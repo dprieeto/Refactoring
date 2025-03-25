@@ -3,6 +3,7 @@ package edu.uhu.monopoly;
 public abstract class Cell {
 	private String name;
 	protected Player propietary;
+	private boolean available = true;
 
 	public String getName() {
 		return name;
@@ -29,4 +30,12 @@ public abstract class Cell {
     public String toString() {
         return name;
     }
+
+	public boolean isAvailable() {
+		return available;
+	}
+
+	public void setAvailable(boolean available, CardCell cardCell) {
+		this.available = available;
+	}
 }
