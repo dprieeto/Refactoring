@@ -26,7 +26,7 @@ public class PropertyCell extends Cell {
 
 	public int getRent() {
 		int rentToCharge = rent;
-		String [] monopolies = Propietary.getMonopolies();
+		String [] monopolies = propietary.getMonopolies();
 		for(int i = 0; i < monopolies.length; i++) {
 			if(monopolies[i].equals(colorGroup)) {
 				rentToCharge = rent * 2;
@@ -42,8 +42,8 @@ public class PropertyCell extends Cell {
 		Player currentPlayer = null;
 		if(!isAvailable()) {
 			currentPlayer = GameMaster.instance().getCurrentPlayer();
-			if(Propietary != currentPlayer) {
-				currentPlayer.payRentTo(Propietary, getRent());
+			if(propietary != currentPlayer) {
+				currentPlayer.payRentTo(propietary, getRent());
 			}
 		}
 	}
